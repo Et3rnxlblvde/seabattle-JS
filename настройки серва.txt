@@ -1,0 +1,8 @@
+ssh root@193.0.61.66
+cxDy2hzPhFu3i
+cd ..
+cd /home/seabattledp/back
+nodemon index.js
+
+
+хост - seabattle.chost.com.ua

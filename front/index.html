@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sea Battle</title>
+		<link rel="stylesheet" href="src/style.css" />
+	</head>
+	<body>
+		<div class="app">
+			<div class="app-header">
+				<h1 class="app-title">Морський бій</h1>
+				<p class="app-subtitle">
+					<span data-playersCount>0</span> гравців онлайн
+				</p>
+			</div>
+			<div class="app-body">
+				<div data-side="player"></div>
+				<div class="app-menu">
+					<div class="app-actions" data-scene="preparation">
+						<button class="app-action" data-computer="simple" disabled>
+							Грати проти слабака
+						</button>
+						<button class="app-action" data-computer="middle" disabled>
+							Грати проти середнього
+						</button>
+						<button class="app-action" data-computer="hard" disabled>
+							Грати проти сильного
+						</button>
+						<button class="app-action" data-type="random" disabled>
+							Грати проти випадкового гравця
+						</button>
+						<button class="app-action" data-type="challenge" disabled>
+							Викликати на бій
+						</button>
+						<button class="app-action" data-type="takeChallenge" disabled>
+							Прийняти виклик
+						</button>
+						<button class="app-action" data-action="manually">
+							Розставити кораблі вручну
+						</button>
+						<button class="app-action" data-action="randomize">
+							Розставити кораблі випадково
+						</button>
+					</div>
+
+					<div class="app-actions hidden" data-scene="computer">
+						<div class="battlefield-status">Ваш хід</div>
+						<button class="app-action" data-action="gaveup">Здатись</button>
+						<button class="app-action" data-action="again">
+							Грати ще раз
+						</button>
+					</div>
+
+					<div class="app-actions hidden" data-scene="online">
+						<div class="battlefield-status">Ваш хід</div>
+						<button class="app-action" data-action="gaveup">Здатись</button>
+						<button class="app-action" data-action="again">
+							Грати ще раз
+						</button>
+					</div>
+				</div>
+				<div data-side="opponent"></div>
+			</div>
+			<div class="app-chat hidden">
+				<input class="app-chatinput" />
+				<div class="app-messages">
+					<!-- <div class="app-message">Вот какое-то сообщение</div>
+					<div class="app-message">Вот какое-то сообщение</div>
+					<div class="app-message">Вот какое-то сообщение</div> -->
+				</div>
+			</div>
+		</div>
+
+		<script src="src/additional.js"></script>
+		<script src="src/Mouse.js"></script>
+
+		<script src="src/Application.js"></script>
+		<script src="src/Scene.js"></script>
+
+		<script src="src/scenes/PreparationScene.js"></script>
+		<script src="src/scenes/ComputerScene.js"></script>
+		<script src="src/scenes/OnlineScene.js"></script>
+
+		<script src="src/Battlefield.js"></script>
+		<script src="src/BattlefieldView.js"></script>
+
+		<script src="src/Ship.js"></script>
+		<script src="src/ShipView.js"></script>
+
+		<script src="src/Shot.js"></script>
+		<script src="src/ShotView.js"></script>
+
+		<script src="socket.io/socket.io.js"></script>
+		<script src="src/script.js"></script>
+	</body>
+</html>
